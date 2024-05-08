@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890449891052",
+    "project_id": "qrcode-bloc-rudy",
+    "storage_bucket": "qrcode-bloc-rudy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890449891052:android:6200c6dc3211da2651dfc9",
+        "android_client_info": {
+          "package_name": "com.example.qrcode_bloc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlGPaMypJzG87gDM15fk_0hv8dnX4b_nM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
