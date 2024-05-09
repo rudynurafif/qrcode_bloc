@@ -14,7 +14,7 @@ class NotFoundPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Error 404 Not Found"),
+            const Text("Error 404 Not Found"),
             ElevatedButton(
               onPressed: () {
                 context.go('/');
