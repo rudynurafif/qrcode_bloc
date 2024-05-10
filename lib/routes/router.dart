@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:go_router/go_router.dart';
-import 'package:qrcode_bloc/pages/detail_product.dart';
-import 'package:qrcode_bloc/pages/products.dart';
+import '../pages/detail_product.dart';
+import '../pages/login.dart';
+import '../pages/products.dart';
 import '../pages/home.dart';
 import '../pages/not_found.dart';
 import '../pages/settings.dart';
@@ -11,6 +13,17 @@ part 'route_name.dart';
 
 // GoRouter configuration
 final router = GoRouter(
+  redirect: (context, state) {
+    FirebaseAuth auth = FirebaseAuth.instance;
+
+    print(auth.currentUser);
+
+    if (auth.currentUser == null) {
+      return "/login";
+    } else {
+      return null;
+    }
+  },
   errorBuilder: (context, state) => const NotFoundPage(),
   routes: [
     GoRoute(
@@ -39,6 +52,11 @@ final router = GoRouter(
       path: '/settings',
       name: Routes.settings,
       builder: (context, state) => const SettingPage(),
+    ),
+    GoRoute(
+      path: '/login',
+      name: Routes.login,
+      builder: (context, state) => LoginPage(),
     ),
   ],
 );
